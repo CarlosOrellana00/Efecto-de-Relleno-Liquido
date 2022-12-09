@@ -1,0 +1,48 @@
+body{
+  margin: 0px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222222;
+}
+
+.box{
+  width: 400px;
+  height: 400px;
+  border: 10px solid #e0b602;
+  border-radius: 10px;
+  line-height: 200px;
+  text-align: center;
+  color: red;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.box:before{
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: #00cccc;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 40%;
+  animation: fill 7s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes fill{
+  from{
+    top:250px;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to{
+    top: -50px;
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
